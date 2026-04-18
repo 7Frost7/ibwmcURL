@@ -1,4 +1,4 @@
 [
   { "addr": "71.193.237.76:25566", "name": "Ibw SMP" },
-  { "addr": "ws://97.120.147.166:25565", "name": "Private Ibw SMP" }
+  { "addr": "ws://97.120.223.224:25565", "name": "Private Ibw SMP" }
 ]
