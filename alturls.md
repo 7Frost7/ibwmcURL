@@ -1,0 +1,14 @@
+https://ibwansmp.surge.sh/
+https://ibwanarchy.surge.sh/
+https://idabsmpan.surge.sh/
+https://schoolanarchyserver.surge.sh
+https://ibwedu.surge.sh
+https://hardworkandstudiousendevors.surge.sh
+https://ibwanarchysmp.surge.sh
+https://ibw2.surge.sh
+https://ibwsmps2.surge.sh
+https://canihasmc.surge.sh
+https://onedotfourteen.surge.sh
+https://smp14.surge.sh
+https://ibwsmp14.surge.sh
+https://ibws2.surge.sh
