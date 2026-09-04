@@ -12,3 +12,4 @@ https://onedotfourteen.surge.sh
 https://smp14.surge.sh
 https://ibwsmp14.surge.sh
 https://ibws2.surge.sh
+https://ibwminecraft.surge.sh/
