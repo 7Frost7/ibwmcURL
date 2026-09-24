@@ -1,107 +1,123 @@
-document.documentElement.style.display = "none";
+(() => {
+    function showNotice() {
+        if (!document.body) {
+            setTimeout(showNotice, 10);
+            return;
+        }
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.documentElement.style.display = "";
+        document.documentElement.style.display = "";
 
-    const overlay = document.createElement("div");
+        const overlay = document.createElement("div");
 
-    overlay.innerHTML = `
-        <div style="
-            position: fixed;
-            inset: 0;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 999999;
-            font-family: Arial, sans-serif;
-        ">
+        overlay.innerHTML = `
             <div style="
-                width: min(90%, 500px);
-                text-align: center;
-                color: black;
+                position: fixed;
+                inset: 0;
+                background: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 999999;
+                font-family: Arial, sans-serif;
             ">
-                <h2>Running on a website is deprecated</h2>
+                <div style="
+                    width: min(90%, 500px);
+                    text-align: center;
+                    color: black;
+                ">
+                    <h2>Running on a website is deprecated</h2>
 
-                <p>
-                    Running this directly from a website is deprecated.
-                    We recommend using the HTML file instead. It will work the same, but be a file instead.
-                    It will still work as intended.
-                </p>
+                    <p>
+                        Running this directly from a website is deprecated.
+                        We recommend using the HTML file instead. It will work the same, but be a file instead.
+                        It will still work as intended.
+                    </p>
 
-                <p>
-                    To run the file, click on it after it downloads. It will open as a website.
-                    Then, you can bookmark it or just save the URL. It functions the exact same.
-                </p>
+                    <p>
+                        To run the file, click on it after it downloads. It will open as a website.
+                        Then, you can bookmark it or just save the URL. It functions the exact same.
+                    </p>
 
-                <p>
-                    <strong>If your HTML file is blocked, bookmark the file URL, then double-click the bookmark,
-                    and the site will open as normal. Refer to the Google Doc for more info.</strong>
-                </p>
+                    <p>
+                        <strong>
+                            If your HTML file is blocked, bookmark the file URL, then double-click the bookmark,
+                            and the site will open as normal. Refer to the Google Doc for more info.
+                        </strong>
+                    </p>
 
-                <a
-                    href="https://tinyurl.com/ibwmcsmp"
-                    download
-                    style="
-                        display: inline-block;
-                        margin: 8px;
-                        padding: 10px 18px;
-                        background: black;
-                        color: white;
-                        text-decoration: none;
-                        border-radius: 4px;
-                    "
-                >
-                    Get the HTML file
-                </a>
+                    <a
+                        href="https://tinyurl.com/ibwmcsmp"
+                        download
+                        style="
+                            display: inline-block;
+                            margin: 8px;
+                            padding: 10px 18px;
+                            background: black;
+                            color: white;
+                            text-decoration: none;
+                            border-radius: 4px;
+                        "
+                    >
+                        Get the HTML file
+                    </a>
 
-                <p>
-                    All news, instructions, and unblocked URLs are available on this Google Doc:
-                </p>
+                    <p>
+                        All news, instructions, and unblocked URLs are available on this Google Doc:
+                    </p>
 
-                <a
-                    href="https://docs.google.com/document/d/1t54DGbo2r-fcKp5vmh1ih3SAbyEUh9DVBmBj3dKMjZM/edit?usp=sharing"
-                    target="_blank"
-                    style="
-                        display: inline-block;
-                        margin: 8px;
-                        padding: 10px 18px;
-                        background: black;
-                        color: white;
-                        text-decoration: none;
-                        border-radius: 4px;
-                    "
-                >
-                    Open Google Doc
-                </a>
+                    <a
+                        href="https://docs.google.com/document/d/1t54DGbo2r-fcKp5vmh1ih3SAbyEUh9DVBmBj3dKMjZM/edit?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style="
+                            display: inline-block;
+                            margin: 8px;
+                            padding: 10px 18px;
+                            background: black;
+                            color: white;
+                            text-decoration: none;
+                            border-radius: 4px;
+                        "
+                    >
+                        Open Google Doc
+                    </a>
 
-                <p>
-                    It is recommended that you bookmark this Google Doc and check it if anything goes wrong.
-                </p>
+                    <p>
+                        It is recommended that you bookmark this Google Doc and check it if anything goes wrong.
+                    </p>
 
-                <br>
+                    <br>
 
-                <button
-                    id="continueButton"
-                    style="
-                        margin-top: 8px;
-                        padding: 9px 16px;
-                        background: white;
-                        color: black;
-                        border: 1px solid #999;
-                        border-radius: 4px;
-                        cursor: pointer;
-                    "
-                >
-                    Continue Anyway
-                </button>
+                    <button
+                        id="continueButton"
+                        style="
+                            margin-top: 8px;
+                            padding: 9px 16px;
+                            background: white;
+                            color: black;
+                            border: 1px solid #999;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        "
+                    >
+                        Continue Anyway
+                    </button>
+                </div>
             </div>
-        </div>
-    `;
+        `;
 
-    document.body.appendChild(overlay);
+        document.body.appendChild(overlay);
 
-    document.getElementById("continueButton").addEventListener("click", () => {
-        overlay.remove();
-    });
-});
+        document.getElementById("continueButton").addEventListener("click", () => {
+            overlay.remove();
+        });
+    }
+
+    document.documentElement.style.display = "none";
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", showNotice, { once: true });
+    } else {
+        showNotice();
+    }
+})();
