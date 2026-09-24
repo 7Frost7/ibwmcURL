@@ -33,9 +33,8 @@
                     </p>
 
                     <p>
-                        The game uses a <strong>ws://</strong> WebSocket connection.
-                        Because of this, the game needs to be opened from an
-                        <strong>HTTP</strong> page.
+                        The game uses a <strong>ws://</strong> WebSocket connection,
+                        so it needs to be opened from an HTTP page.
                     </p>
 
                     <p>
