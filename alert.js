@@ -25,23 +25,30 @@
                     text-align: center;
                     color: black;
                 ">
-                    <h2>Running on a website is deprecated</h2>
+                    <h2>MAKE SURE THIS SITE IS USING HTTP:// NOT HTTPS://</h2>
 
                     <p>
-                        Running this directly from a website is deprecated.
-                        We recommend using the HTML file instead. It will work the same, but be a file instead.
-                        It will still work as intended.
+                        Make sure the address at the top of your browser starts with
+                        <strong>http://</strong> and not <strong>https://</strong>.
                     </p>
 
                     <p>
-                        To run the file, click on it after it downloads. It will open as a website.
-                        Then, you can bookmark it or just save the URL. It functions the exact same.
+                        The game uses a <strong>ws://</strong> WebSocket connection.
+                        Because of this, the game needs to be opened from an
+                        <strong>HTTP</strong> page.
+                    </p>
+
+                    <p>
+                        To download the HTML file, click the button below.
+                        Depending on your browser or network, opening the downloaded
+                        file may require a workaround.
                     </p>
 
                     <p>
                         <strong>
-                            If your HTML file is blocked, bookmark the file URL, then double-click the bookmark,
-                            and the site will open as normal. Refer to the Google Doc for more info.
+                            If your HTML file is blocked, bookmark the file URL,
+                            then double-click the bookmark. The site should then
+                            open normally. Refer to the Google Doc for more info.
                         </strong>
                     </p>
 
@@ -62,7 +69,8 @@
                     </a>
 
                     <p>
-                        All news, instructions, and unblocked URLs are available on this Google Doc:
+                        All news, instructions, and unblocked URLs are available on
+                        this Google Doc:
                     </p>
 
                     <a
@@ -83,13 +91,15 @@
                     </a>
 
                     <p>
-                        It is recommended that you bookmark this Google Doc and check it if anything goes wrong.
+                        Check the Google Doc if something goes wrong or you need
+                        another unblocked URL.
                     </p>
 
                     <br>
 
                     <button
                         id="continueButton"
+                        type="button"
                         style="
                             margin-top: 8px;
                             padding: 9px 16px;
