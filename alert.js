@@ -7,7 +7,7 @@
 
         document.documentElement.style.display = "";
 
-        const gameURL = "http://" + window.location.host + "/game/";
+        const gameURL = window.GAME_URL;
 
         const overlay = document.createElement("div");
 
@@ -111,7 +111,11 @@
         document.body.appendChild(overlay);
 
         document.getElementById("continueButton").addEventListener("click", () => {
-            window.location.href = gameURL;
+            if (gameURL) {
+                window.location.href = gameURL;
+            } else {
+                alert("Game URL was not configured.");
+            }
         });
     }
 
