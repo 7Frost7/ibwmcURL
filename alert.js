@@ -41,9 +41,6 @@
                         To download the HTML file, click the button below.
                         Depending on your browser or network, opening the downloaded
                         file may require a workaround.
-                    </p>
-
-                    <p>
                         <strong>
                             If your HTML file is blocked, bookmark the file URL,
                             then double-click the bookmark. The site should then
@@ -88,11 +85,6 @@
                     >
                         Open Google Doc
                     </a>
-
-                    <p>
-                        Check the Google Doc if something goes wrong or you need
-                        another unblocked URL.
-                    </p>
 
                     <br>
 
