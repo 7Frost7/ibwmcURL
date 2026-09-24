@@ -9,6 +9,20 @@
 
         const gameURL = window.GAME_URL;
 
+        if (!gameURL) {
+            document.body.innerHTML = `
+                <div style="
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    padding: 40px;
+                ">
+                    <h2>Game URL is missing</h2>
+                    <p>Please configure window.GAME_URL in index.html.</p>
+                </div>
+            `;
+            return;
+        }
+
         const overlay = document.createElement("div");
 
         overlay.innerHTML = `
@@ -27,23 +41,29 @@
                     text-align: center;
                     color: black;
                 ">
-                    <h2>Running on a website is deprecated</h2>
+
+                    <h2>MAKE SURE THIS SITE IS USING HTTP:// NOT HTTPS://</h2>
 
                     <p>
-                        Running this directly from a website is deprecated.
-                        We recommend using the HTML file instead. It will work the same, but be a file instead.
-                        It will still work as intended.
+                        Before continuing, make sure the address of this site starts with
+                        <strong>http://</strong> and not <strong>https://</strong>.
                     </p>
 
                     <p>
-                        To run the file, click on it after it downloads. It will open as a website.
-                        Then, you can bookmark it or just save the URL. It functions the exact same.
+                        The game uses an insecure WebSocket connection, so it needs to be
+                        opened from an HTTP page.
+                    </p>
+
+                    <p>
+                        To download the HTML file, use the button below.
+                        Depending on your browser or network, opening the downloaded file
+                        may require a workaround.
                     </p>
 
                     <p>
                         <strong>
-                            If your HTML file is blocked, bookmark the file URL, then double-click the bookmark,
-                            and the site will open as normal. Refer to the Google Doc for more info.
+                            If the HTML file is blocked, bookmark the file URL, then
+                            double-click the bookmark. The file should then open normally.
                         </strong>
                     </p>
 
@@ -60,7 +80,7 @@
                             border-radius: 4px;
                         "
                     >
-                        Get the HTML file
+                        Download HTML File
                     </a>
 
                     <p>
@@ -84,26 +104,24 @@
                         Open Google Doc
                     </a>
 
-                    <p>
-                        It is recommended that you bookmark this Google Doc and check it if anything goes wrong.
-                    </p>
-
-                    <br>
+                    <br><br>
 
                     <button
                         id="continueButton"
+                        type="button"
                         style="
-                            margin-top: 8px;
-                            padding: 9px 16px;
+                            padding: 10px 18px;
                             background: white;
                             color: black;
                             border: 1px solid #999;
                             border-radius: 4px;
                             cursor: pointer;
+                            font-size: 15px;
                         "
                     >
                         Continue Anyway
                     </button>
+
                 </div>
             </div>
         `;
@@ -111,11 +129,7 @@
         document.body.appendChild(overlay);
 
         document.getElementById("continueButton").addEventListener("click", () => {
-            if (gameURL) {
-                window.location.href = gameURL;
-            } else {
-                alert("Game URL was not configured.");
-            }
+            window.location.href = gameURL;
         });
     }
 
