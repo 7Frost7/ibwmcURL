@@ -7,21 +7,7 @@
 
         document.documentElement.style.display = "";
 
-        const gameURL = window.GAME_URL;
-
-        if (!gameURL) {
-            document.body.innerHTML = `
-                <div style="
-                    font-family: Arial, sans-serif;
-                    text-align: center;
-                    padding: 40px;
-                ">
-                    <h2>Game URL not configured</h2>
-                    <p>The launcher does not have a game URL configured.</p>
-                </div>
-            `;
-            return;
-        }
+        const gameURL = "http://" + window.location.host + "/game/";
 
         const overlay = document.createElement("div");
 
