@@ -1,5 +1,3 @@
-{
-    addr: "ws://97.120.165.226:8787/",
-    comment: "IBW Custom Relay",
-    primary: true
-}
+[
+  { "addr": "ws://97.120.165.226:8787", "comment": "Ibw Low Ping", "primary": "true" }
+]
